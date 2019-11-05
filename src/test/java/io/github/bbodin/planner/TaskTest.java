@@ -54,7 +54,7 @@ public class TaskTest {
     @Test
     public void testToXML() {
         System.out.println("toXML");
-        String expResult = instance.toXML();
+        String expResult = "<task name='task11' start='" + getInDays(0).toString() + "' duration='PT24H' deadline='" + getInDays(20).toString() + "' description='description11'/>";
         String result = instance.toXML();
         assertEquals(expResult, result);
     }
@@ -93,7 +93,6 @@ public class TaskTest {
         int expResult = 0;
         int result = instance.compareTo(o);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
     
 }
