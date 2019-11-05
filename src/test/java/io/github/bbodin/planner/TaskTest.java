@@ -54,7 +54,7 @@ public class TaskTest {
     @Test
     public void testToXML() {
         System.out.println("toXML");
-        String expResult = "<task name='task11' start='" + getInDays(0).toString() + "' duration='PT24H' deadline='" + getInDays(20).toString() + "' description='description11'/>";
+        String expResult = "<task name='" + taskName + "' start='" + getInDays(0).toString() + "' duration='" + Duration.ofDays(0) +"' deadline='" + getInDays(20).toString() + "' description='" + taskDesc + "'/>";
         String result = instance.toXML();
         assertEquals(expResult, result);
     }
